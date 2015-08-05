@@ -1,11 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
-    <title>Labor Day Grand Canyon Trip (Draft I)</title>
+    <title>Labor Day Grand Canyon Trip (Draft II)</title>
+    <style type="text/css">
+      body.thirdDayPermitObtained .secondDayPermitObtained {
+        display: none;
+      }
+      body.secondDayPermitObtained .thirdDayPermitObtained {
+        display: none;
+      }
+      body.secondDayPermitObtained .secondDayPermitFailToObtain {
+        display: none;
+      }
+      body.secondDayPermitObtained .permitFailToObtain {
+        display: none;
+      }
+      body.thirdDayPermitObtained .permitFailToObtain {
+        display: none;
+      }
+      body.permitFailToObtain .secondDayPermitObtained {
+        display: none;
+      }
+      body.permitFailToObtain .thirdDayPermitObtained {
+        display: none;
+      }
+      body.permitFailToObtain .permitObtained {
+        display: none;
+      }
+      li.secondDayPermitObtained {
+        color: green;
+      }
+      li.secondDayPermitFailToObtain {
+        color: gold;
+      }
+      li.thirdDayPermitObtained {
+        color: gold;
+      }
+      li.permitObtained {
+        color: green;
+      }
+      li.permitFailToObtain {
+        color: red;
+      }
+    </style>
   </head>
-  <body>
+  <body class="secondDayPermitObtained">
+    <script type="text/javascript">
+      function thirdDayPermitObtained() {
+        document.getElementsByTagName("body")[0].classname = "thirdDayPermitObtained";
+      }
+      function secondDayPermitObtained() {
+        document.getElementsByTagName("body")[0].classname = "secondDayPermitObtained";
+      }
+      function permitFailToObtain() {
+        document.getElementsByTagName("body")[0].classname = "permitFailToObtain";
+      }
+    </script>
     <h1>General Information</h1>
     <ol>
-      <li>Time: Sept. 4, 2015, Friday - Sept. 7, 2015, Monday (Labor Day)</li>
+      <li>Time: Sept. 4, 2015, Friday - Sept. 8, 2015, Tuesday</li>
+      <li>Reminder: Sept. 7, 2015, Monday is the Labor Day</li>
+      <li>Participants: Henry, Daisy, Zoey, </li>
+    </ol>
+
+    <h1>Things You Need to Know</h1>
+
+    <h1>Hike Information</h1>
+    <ol>
+      <li></li>
     </ol>
 
     <h1>Itinerary</h1>
@@ -14,14 +76,8 @@
 	First day -- Sept. 4, 2015:<br>
 	<ol>
 	  <li>
-	    Flight: To <b>Las Vegas</b> or <b>Phoenix</b>; 
-	    Arrive before 12:00 PM
-	  </li>
-	  <li>
-	    1:00 PM: Head to Grand Canyon National Park -- South Rim
-	  </li>
-	  <li>
-	    5:00 PM: Arrive at Mathar Campground
+	    Flight: To <b>Las Vegas</b>; 
+	    Arrive before 11:00 PM
 	  </li>
 	</ol>
       </li>
@@ -29,30 +85,101 @@
 	Second day -- Sept. 5, 2015:<br>
 	<ol>
 	  <li>
-	    4:00 AM: Get up and prepare for the hike
+	    12:00 AM: Head to Grand Canyon National Park -- South Rim
 	  </li>
 	  <li>
-	    5:30 AM: Take shuttle to the Bright Angel Trailhead
+	    4:30 AM: Arrive at Ranger Office
 	  </li>
 	  <li>
-	    12:00 NOON: Arrive at Bright Angel Campground
-          </li>
+	    8:00 AM: Try to get an backcountry permit from Ranger Office<br>
+	    <button class="secondDayPermitObtained" onclick="thirdDayPermitObtained()">Permit out of stock?</button>
+	    <button class="secondDayPermitFailToObtain" onclick="secondDayPermitObtained()">Permit in stock?</button>
+	  </li>
+	  <li class="secondDayPermitObtained">
+	    8:30 AM: Purchase Permit
+	  </li>
+	  <li class="secondDayPermitFailToObtain">
+	    8:30 AM: Get a waitlist number
+	  </li>
 	  <li>
-	    Afternoon and Evening: Play around at the river
+	    9:00 AM: Head to Page, AZ
+	  </li>
+	  <li>
+	    12:00 NOON: Arrive at Antelop Canyon
+	  </li>
+	  <li>
+	    2:00 PM: Lunch
+	  </li>
+	  <li>
+	    3:30 PM: Visit Horseshoe Bend
+	  </li>
+	  <li>
+	    4:00 PM: Head back Grand Canyon National Park -- South Rim
+	  </li>
+	  <li>
+	    7:00 PM: Arrive Grand Canyon National Park -- Mather Campground
+	  </li>
+	  <li>
+	    EVENING: Setup Camp, Supper and Sleep
 	  </li>
 	</ol>
       </li>
       <li>
 	Third day -- Sept. 6, 2015:<br>
 	<ol>
-	  <li>
+	  <!-- If Already Have Permit -->
+	  <li class="secondDayPermitObtained">
+	    4:00 AM: Get up and prepare for the hike
+	  </li>
+	  <li class="secondDayPermitObtained">
+	    5:30 AM: Take shuttle to the Bright Angel Trailhead
+	  </li>
+	  <li class="secondDayPermitObtained">
+	    12:00 NOON: Arrive at Bright Angel Campground
+          </li>
+	  <li class="secondDayPermitObtained">
+	    Afternoon and Evening: Play around at the river
+	  </li>
+
+	  <!-- Otherwise -->
+	  <li class="secondDayPermitFailToObtain">
+	    6:00 AM: Wake up and get ready
+	  </li>
+	  <li class="secondDayPermitFailToObtain">
+	    8:00 AM: Try to get a backcountry permit
+	  </li>
+	  <!-- If Permit Obtained -->
+	  <li class="thirdDayPermitObtained">
+	    8:30 AM: Take shuttle to the Bright Angel Trailhead
+	  </li>
+	  <li class="thridDayPermitObtained">
+	    3:00 PM: Arrive at Bright Angel Campground
+          </li>
+	  <li class="thridDayPermitObtained">
+	    Afternoon and Evening: Play around at the river
+	  </li>
+	  <!-- Otherwise -->
+	  <li class="permitFailToObtain">
+	    Day hike in Grand Canyon National Park (Detail in next draft)
+	  </li>
+
+	</ol>
+      </li>
+      <li>
+	Fourth day -- Sept. 7, 2015:<br>
+	<ol>
+	  <li class="permitObtained">
 	    3:30 AM: Get up and prepare for the hike
 	  </li>
-	  <li>
+	  <li class="permitObtained">
 	    4:30 AM: Start heading back via South Kaibab Trail
 	  </li>
-	  <li>
+	  <li class="permitObtained">
 	    12:00 NOON: Arrive at South Kaibab Trailhead
+	  </li>
+	  <li class="permitFailToObtain">
+	    8:00 AM - 12:00 NOON: 
+	    Activities in Grand Canyon National Park (Detail in next draft)
 	  </li>
 	  <li>
 	    12:30 PM: Start heading to Las Vegas
@@ -66,7 +193,7 @@
 	</ol>
       </li>
       <li>
-	Fourth day -- Sept. 7, 2015:<br>
+	Fifth day -- Sept. 8, 2015:<br>
 	<ol>
 	  <li>
 	    9:00 AM: Breakfast together
@@ -90,7 +217,7 @@
       <li>200.00: Shows (Optional)</li>
       <li>Plus equipment rental and flight ticket</li>
     </ul>
-    <b>Total: 290.00 + 260.00 (Optional) + Equipment + Flight</b>
+    <div><b>Total: 290.00 + 260.00 (Optional) + Equipment + Flight</b></div>
 
   </body>
 </html>
