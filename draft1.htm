@@ -47,27 +47,56 @@
   <body class="secondDayPermitObtained">
     <script type="text/javascript">
       function thirdDayPermitObtained() {
-        document.getElementsByTagName("body")[0].classname = "thirdDayPermitObtained";
+        document.getElementsByTagName("body")[0].className = "thirdDayPermitObtained";
       }
       function secondDayPermitObtained() {
-        document.getElementsByTagName("body")[0].classname = "secondDayPermitObtained";
+        document.getElementsByTagName("body")[0].className = "secondDayPermitObtained";
       }
       function permitFailToObtain() {
-        document.getElementsByTagName("body")[0].classname = "permitFailToObtain";
+        document.getElementsByTagName("body")[0].className = "permitFailToObtain";
       }
     </script>
     <h1>General Information</h1>
     <ol>
       <li>Time: Sept. 4, 2015, Friday - Sept. 8, 2015, Tuesday</li>
       <li>Reminder: Sept. 7, 2015, Monday is the Labor Day</li>
-      <li>Participants: Henry, Daisy, Zoey, </li>
+      <li>Participants: Henry, Daisy, Zoey, Jasmine, Brody</li>
+      <li>Application Deadline: Aug. 9, 2015, Sunday</li>
     </ol>
 
     <h1>Things You Need to Know</h1>
+    <ol>
+      <li>
+	Camping at the bottom of Grand Canyon requires backcountry permit that
+	we dont have yet. It is possible that we might not able to obtain one 
+	when we arrive. Please check the itinerary to see our alternative plan.
+      </li>
+      <li>
+	The rought budget estimate is not the final cost. The final cost may be
+	less or greater than the estimate.
+      </li>
+    </ol>
 
     <h1>Hike Information</h1>
     <ol>
-      <li></li>
+      <li>
+	Hike down: Bright Angel Trail
+	<ul>
+	  <li>Length: 9.5 miles</li>
+	  <li>Elevation loss: 6860 feet</li>
+	  <li>Destination: Bright Angel Campground</li>
+	  <li>Time Estimate: 5 Hours</li>
+	</ul>
+      </li>
+      <li>
+	Hike up: South Kaibab Trail
+	<ul>
+	  <li>Length: 7.0 miles</li>
+	  <li>Elevation gain: 7260 feet</li>
+	  <li>Time Estimate: 6 Hours</li>
+	</ul>
+      </li>
+      <li><a href="http://www.nps.gov/grca/planyourvisit/upload/Corridor_Brochure.pdf">Trail Information Reference</a></li>
     </ol>
 
     <h1>Itinerary</h1>
@@ -146,7 +175,9 @@
 	    6:00 AM: Wake up and get ready
 	  </li>
 	  <li class="secondDayPermitFailToObtain">
-	    8:00 AM: Try to get a backcountry permit
+	    8:00 AM: Try to get a backcountry permit<br>
+	    <button class="thirdDayPermitObtained" onclick="permitFailToObtain()">Permit out of stock?</button>
+	    <button class="permitFailToObtain" onclick="thirdDayPermitObtained()">Permit in stock?</button>
 	  </li>
 	  <!-- If Permit Obtained -->
 	  <li class="thirdDayPermitObtained">
@@ -205,19 +236,19 @@
       </li>
     </ul>
     
-    <h1>Rough Budget (Per Person)</h1>
+    <h1>Rough Budget Estimate (Per Person)</h1>
     <ul>
-      <li>20.00: First night campground</li>
-      <li>100.00: Third night hotel</li>
-      <li>50.00: Camp food for second-day breakfast, lunch, dinner, third-day breakfast and lunch</li>
-      <li>50.00: Food for first-day lunch, dinner, and fourth-day breakfast</li>
+      <li>20.00: Second night campground</li>
+      <li>100.00: Fourth night hotel</li>
+      <li>50.00: Camp food for third-day breakfast, lunch, dinner, fourth-day breakfast and lunch</li>
+      <li>60.00: Food for second-day breakfast, lunch, dinner, and fourth-day breakfast</li>
       <li>50.00: Car rental</li>
       <li>20.00: Gas</li>
-      <li>60.00: third-day dinner (Optional)</li>
+      <li>60.00: fourth-day dinner (Optional)</li>
       <li>200.00: Shows (Optional)</li>
       <li>Plus equipment rental and flight ticket</li>
     </ul>
-    <div><b>Total: 290.00 + 260.00 (Optional) + Equipment + Flight</b></div>
+    <div><b>Total: 300.00 + 260.00 (Optional) + Equipment + Flight</b></div>
 
   </body>
 </html>
